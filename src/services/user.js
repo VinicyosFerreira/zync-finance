@@ -77,9 +77,6 @@ const UserService = {
       earnings: response.data.earnings,
       expenses: response.data.expenses,
       investments: response.data.investments,
-      earningsPercentage: response.data.earnings_percentage,
-      expensesPercentage: response.data.expenses_percentage,
-      investmentsPercentage: response.data.investments_percentage,
       balance: response.data.balance,
     };
   },

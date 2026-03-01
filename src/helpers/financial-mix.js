@@ -1,12 +1,10 @@
 export const generateFinancialMix = (data) => {
-  const newData = Object.entries(data).map(([key, value]) => {
-    if (key != 'earnings' && key != 'investments' && key != 'expenses') {
-      delete data[key];
-    }
+  const targetKeys = ['earnings', 'expenses', 'investments'];
 
+  const newData = targetKeys.map((key) => {
     return {
       type: key,
-      value: Number(value) || 0,
+      value: Number(data[key]) || 0,
     };
   });
 
